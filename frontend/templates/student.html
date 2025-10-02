@@ -102,6 +102,17 @@
     </a>
     <h1>National Institute of Electronics and Information Technology - Imphal</h1>
   </div>
+    <!-- Flash messages -->
+{% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul style="color: green;">
+      {% for msg in messages %}
+        <li>{{ msg }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+
 
   <!-- Login Form -->
   <div class="container">
